@@ -108,7 +108,7 @@ exports.handler = async (event) => {
         <tr><td style="padding:6px 0;">
           <table cellpadding="0" cellspacing="0"><tr>
             <td style="width:32px;height:32px;background:rgba(123,108,255,.12);border-radius:10px;text-align:center;vertical-align:middle;font-size:13px;font-weight:800;color:#7B6CFF;">2</td>
-            <td style="padding-left:12px;font-size:14px;color:#3d3a5c;line-height:1.6;">Va dans l'onglet "Crée un compte" avec ton email et ton propre mot de passe et Dans la case "Code d'accès formation" rentre le code ci-dessus</td>
+            <td style="padding-left:12px;font-size:14px;color:#3d3a5c;line-height:1.6;">Va dans l'onglet "Crée un compte" avec ton email et ton propre mot de passe. Dans la case "Code d'accès formation" rentre le code ci-dessus</td>
           </tr></table>
         </td></tr>
         <tr><td style="padding:6px 0;">
