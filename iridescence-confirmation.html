@@ -3,389 +3,128 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Bienvenue dans Iridescence ✦</title>
+<title>Merci ! ✦ Iridescence</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 :root{
-  --iris:#7B6CFF;
-  --pink:#FF6BE8;
-  --mint:#9BFFE7;
-  --gold:#FFF3A3;
-  --dark:#0d0d15;
-  --ink:#1a1730;
-  --muted:#6e6d85;
-  --soft:#f7f5ff;
-  --card:#ffffff;
-  --border:rgba(123,108,255,.13);
+  --iris:#7B6CFF;--pink:#FF6BE8;--mint:#9BFFE7;--gold:#FFF3A3;
+  --ink:#1a1730;--muted:#6e6d85;--soft:#f7f5ff;--border:rgba(123,108,255,.13);
 }
-html{scroll-behavior:smooth;}
-body{
-  font-family:'Sora',sans-serif;
-  background:var(--soft);
-  color:var(--ink);
-  min-height:100vh;
-  overflow-x:hidden;
-}
+body{font-family:'Sora',sans-serif;background:var(--soft);color:var(--ink);min-height:100vh;overflow-x:hidden;}
 
-/* ── HALOS ── */
 .halo{position:fixed;border-radius:50%;pointer-events:none;filter:blur(90px);z-index:0;}
 .h1{width:600px;height:600px;top:-180px;right:-150px;background:radial-gradient(circle,rgba(255,243,163,.5),transparent 70%);opacity:.55;}
 .h2{width:500px;height:500px;bottom:-150px;left:-120px;background:radial-gradient(circle,rgba(155,255,231,.45),transparent 70%);opacity:.5;}
 .h3{width:350px;height:350px;top:40%;left:55%;background:radial-gradient(circle,rgba(255,107,232,.3),transparent 70%);opacity:.3;}
 
-/* ── CONFETTI ANIMATION ── */
-@keyframes fall{
-  0%{transform:translateY(-20px) rotate(0deg);opacity:1;}
-  100%{transform:translateY(110vh) rotate(720deg);opacity:0;}
-}
+@keyframes fall{0%{transform:translateY(-20px) rotate(0deg);opacity:1;}100%{transform:translateY(110vh) rotate(720deg);opacity:0;}}
 .confetti-wrap{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden;}
-.c{position:absolute;top:-20px;width:8px;height:8px;border-radius:2px;animation:fall linear forwards;}
+.c{position:absolute;top:-20px;animation:fall linear forwards;}
 
-/* ── LAYOUT ── */
-.page{
-  position:relative;z-index:1;
-  max-width:680px;
-  margin:0 auto;
-  padding:3rem 1.5rem 5rem;
-}
+@keyframes popIn{0%{transform:scale(0) rotate(-15deg);opacity:0;}70%{transform:scale(1.15) rotate(5deg);}100%{transform:scale(1) rotate(0deg);opacity:1;}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
 
-/* ── LOGO ── */
-.logo{
-  text-align:center;
-  margin-bottom:2.5rem;
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  font-size:1.5rem;
-  color:var(--iris);
-  letter-spacing:.02em;
-}
+.page{position:relative;z-index:1;max-width:540px;margin:0 auto;padding:4rem 1.5rem 5rem;text-align:center;}
 
-/* ── HERO CONFIRMATION ── */
-.confirm-hero{
-  text-align:center;
-  margin-bottom:2.5rem;
-}
-@keyframes popIn{
-  0%{transform:scale(0) rotate(-15deg);opacity:0;}
-  70%{transform:scale(1.15) rotate(5deg);}
-  100%{transform:scale(1) rotate(0deg);opacity:1;}
-}
-.confirm-icon{
-  font-size:4rem;
-  display:inline-block;
-  animation:popIn .6s cubic-bezier(.34,1.56,.64,1) .2s both;
-  margin-bottom:1rem;
-}
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(24px);}
-  to{opacity:1;transform:translateY(0);}
-}
-.confirm-title{
-  font-size:clamp(1.8rem,5vw,2.6rem);
-  font-weight:800;
-  letter-spacing:-.04em;
-  line-height:1.1;
-  color:var(--ink);
-  margin-bottom:.6rem;
-  animation:fadeUp .6s ease .4s both;
-}
-.confirm-title em{
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  font-weight:600;
-  background:linear-gradient(135deg,var(--iris),var(--pink));
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-.confirm-sub{
-  font-size:1rem;
-  color:var(--muted);
-  line-height:1.7;
-  max-width:480px;
-  margin:0 auto;
+.logo{font-family:'Playfair Display',serif;font-style:italic;font-size:1.5rem;color:var(--iris);margin-bottom:2.5rem;animation:fadeUp .5s ease both;}
+
+.icon{font-size:4.5rem;display:inline-block;animation:popIn .6s cubic-bezier(.34,1.56,.64,1) .2s both;margin-bottom:1.2rem;}
+
+h1{font-size:clamp(1.8rem,6vw,2.6rem);font-weight:800;letter-spacing:-.04em;line-height:1.1;margin-bottom:1.5rem;animation:fadeUp .6s ease .4s both;}
+h1 em{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;background:linear-gradient(135deg,var(--iris),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent;}
+
+.card{
+  background:#fff;border:1px solid var(--border);border-radius:24px;
+  padding:2rem 2rem 2.2rem;text-align:left;
   animation:fadeUp .6s ease .55s both;
+  box-shadow:0 12px 48px rgba(123,108,255,.07);
 }
+.card-text{font-size:.97rem;color:var(--ink);line-height:1.9;margin-bottom:1.8rem;}
 
-/* ── MESSAGE CHARLOTTE ── */
-.charlotte-msg{
-  background:linear-gradient(135deg,rgba(123,108,255,.07),rgba(255,107,232,.05));
-  border:1px solid var(--border);
-  border-left:4px solid var(--iris);
-  border-radius:20px;
-  padding:1.8rem 1.6rem;
-  margin-bottom:1.8rem;
-  animation:fadeUp .6s ease .65s both;
-}
-.charlotte-header{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:1rem;
-}
-.charlotte-av{
-  width:44px;height:44px;border-radius:50%;
-  background:linear-gradient(135deg,var(--iris),var(--pink));
-  display:grid;place-items:center;
-  font-size:1.1rem;font-weight:800;color:#fff;
-  flex-shrink:0;
-}
-.charlotte-av-name{font-size:.9rem;font-weight:700;color:var(--ink);}
-.charlotte-av-role{font-size:.75rem;color:var(--muted);}
-.charlotte-text{
-  font-size:.9rem;
-  color:var(--ink);
-  line-height:1.8;
-}
-.charlotte-text strong{color:var(--iris);}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin-bottom:1.8rem;}
 
-/* ── ÉTAPES ── */
-.steps-title{
-  font-size:.72rem;
-  font-weight:800;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:var(--iris);
-  margin-bottom:1rem;
-  animation:fadeUp .6s ease .75s both;
-}
-.steps{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  margin-bottom:2rem;
-  animation:fadeUp .6s ease .8s both;
-}
-.step{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:1.1rem 1.2rem;
-  display:flex;
-  align-items:flex-start;
-  gap:14px;
-  transition:box-shadow .2s;
-}
-.step:hover{box-shadow:0 8px 32px rgba(123,108,255,.1);}
-.step-num{
-  width:34px;height:34px;border-radius:10px;
-  background:linear-gradient(135deg,rgba(123,108,255,.15),rgba(255,107,232,.1));
-  display:grid;place-items:center;
-  font-size:.85rem;font-weight:800;color:var(--iris);
-  flex-shrink:0;
-}
-.step-title{font-size:.9rem;font-weight:700;color:var(--ink);margin-bottom:3px;}
-.step-desc{font-size:.8rem;color:var(--muted);line-height:1.55;}
-.step-tag{
-  display:inline-flex;align-items:center;gap:4px;
-  font-size:.68rem;font-weight:800;
-  background:rgba(155,255,231,.25);color:#0a6b54;
-  border-radius:50px;padding:3px 10px;margin-top:6px;
-}
+.contact-label{font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--iris);margin-bottom:.9rem;}
 
-/* ── CTA INSCRIPTION ── */
-.cta-wrap{
-  text-align:center;
-  margin-bottom:2rem;
-  animation:fadeUp .6s ease .9s both;
-}
-.cta-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:17px 42px;
-  border-radius:50px;
-  background:linear-gradient(135deg,var(--iris),var(--pink));
-  color:#fff;
-  font-size:1rem;
-  font-weight:800;
-  text-decoration:none;
-  transition:opacity .2s,transform .15s;
-  box-shadow:0 18px 50px rgba(123,108,255,.3);
-  letter-spacing:-.01em;
-}
-.cta-btn:hover{opacity:.9;transform:translateY(-2px);}
-.cta-btn svg{width:18px;height:18px;flex-shrink:0;}
-.cta-note{font-size:.75rem;color:var(--muted);margin-top:.8rem;}
+.contact-links{display:flex;flex-direction:column;gap:10px;}
 
-/* ── CONTACT ── */
-.contact-box{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:20px;
-  padding:1.4rem 1.5rem;
-  animation:fadeUp .6s ease 1s both;
-}
-.contact-title{
-  font-size:.85rem;font-weight:700;color:var(--ink);
-  margin-bottom:1rem;
-  display:flex;align-items:center;gap:8px;
-}
-.contact-links{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
 .contact-link{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:10px 18px;border-radius:50px;
-  font-size:.82rem;font-weight:700;
-  text-decoration:none;
-  transition:opacity .2s,transform .15s;
-  flex:1;min-width:160px;justify-content:center;
+  display:flex;align-items:center;gap:12px;
+  padding:13px 18px;border-radius:14px;
+  font-size:.86rem;font-weight:600;
+  text-decoration:none;transition:opacity .2s,transform .15s;
 }
-.contact-link:hover{opacity:.85;transform:translateY(-1px);}
-.cl-email{background:rgba(123,108,255,.08);color:var(--iris);border:1px solid rgba(123,108,255,.2);}
-.cl-whatsapp{background:rgba(37,211,102,.1);color:#128C7E;border:1px solid rgba(37,211,102,.2);}
+.contact-link:hover{opacity:.85;transform:translateX(4px);}
+.cl-email{background:rgba(123,108,255,.07);color:var(--iris);border:1px solid rgba(123,108,255,.15);}
+.cl-wa{background:rgba(37,211,102,.08);color:#128C7E;border:1px solid rgba(37,211,102,.18);}
+.contact-link span{font-size:1.15rem;}
 
-/* ── FOOTER ── */
-.conf-footer{
-  text-align:center;
-  margin-top:2.5rem;
-  font-size:.72rem;
-  color:#c4c1db;
-  animation:fadeUp .6s ease 1.1s both;
-}
-.conf-footer em{
-  font-family:'Playfair Display',serif;
-  font-style:italic;
-  color:var(--iris);
-  font-size:.82rem;
-}
+.sign{margin-top:1.8rem;font-size:.9rem;color:var(--muted);line-height:1.7;animation:fadeUp .6s ease .7s both;}
+.sign strong{color:var(--ink);}
 
-/* ── RESPONSIVE ── */
-@media(max-width:600px){
-  .page{padding:2rem 1rem 4rem;}
-  .confirm-icon{font-size:3rem;}
-  .cta-btn{padding:15px 28px;font-size:.9rem;width:100%;justify-content:center;}
-  .contact-links{flex-direction:column;}
-  .contact-link{min-width:unset;}
-  .charlotte-msg{padding:1.3rem 1.1rem;}
+.footer{margin-top:3rem;font-size:.72rem;color:#c4c1db;animation:fadeUp .6s ease .8s both;}
+.footer em{font-family:'Playfair Display',serif;font-style:italic;color:var(--iris);}
+
+@media(max-width:480px){
+  .page{padding:3rem 1rem 4rem;}
+  h1{font-size:1.7rem;}
+  .card{padding:1.5rem 1.3rem 1.8rem;}
+  .card-text{font-size:.9rem;}
 }
 </style>
 </head>
 <body>
 
-<!-- HALOS -->
 <div class="halo h1"></div>
 <div class="halo h2"></div>
 <div class="halo h3"></div>
-
-<!-- CONFETTIS -->
 <div class="confetti-wrap" id="confetti"></div>
 
 <div class="page">
 
-  <!-- LOGO -->
   <div class="logo">✦ Iridescence</div>
+  <div class="icon">🎉</div>
 
-  <!-- HERO -->
-  <div class="confirm-hero">
-    <div class="confirm-icon">🎉</div>
-    <h1 class="confirm-title">Bienvenue dans<br><em>Iridescence</em> !</h1>
-    <p class="confirm-sub">Ton paiement a bien été reçu. Tu fais maintenant partie de l'aventure — on est tellement heureuses de t'accueillir. ✨</p>
-  </div>
+  <h1>Merci, ton paiement<br>a bien été reçu <em>!</em></h1>
 
-  <!-- MOT DE CHARLOTTE -->
-  <div class="charlotte-msg">
-    <div class="charlotte-header">
-      <div class="charlotte-av">C</div>
-      <div>
-        <div class="charlotte-av-name">Charlotte</div>
-        <div class="charlotte-av-role">Créatrice d'Iridescence</div>
-      </div>
-    </div>
-    <p class="charlotte-text">
-      Bonjour et <strong>bienvenue !</strong> 🌈<br><br>
-      Je suis tellement contente que tu aies franchi ce pas. Iridescence, c'est bien plus qu'une formation — c'est un espace pour construire une présence en ligne qui te ressemble <em>vraiment</em>.<br><br>
-      La prochaine étape ? Crée ton compte sur la plateforme, et je validerai ton accès personnellement dans les <strong>24 heures</strong>. En attendant, si tu as la moindre question, je suis là. 💜
+  <div class="card">
+    <p class="card-text">
+      Bienvenue dans Iridescence. On est tellement heureuses de t'accueillir.<br><br>
+      Tu vas recevoir un email d'ici peu avec toutes tes informations de connexion pour accéder à ta formation.<br><br>
+      En attendant, si tu as la moindre question n'hésite pas à me contacter :
     </p>
-  </div>
-
-  <!-- ÉTAPES -->
-  <p class="steps-title">✦ Les 3 étapes pour accéder à ta formation</p>
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <div>
-        <div class="step-title">Crée ton compte sur la plateforme</div>
-        <div class="step-desc">Clique sur le bouton ci-dessous et remplis le formulaire d'inscription avec ton prénom, ton email et un mot de passe.</div>
-        <span class="step-tag">⚡ 2 minutes chrono</span>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <div>
-        <div class="step-title">Charlotte valide ton accès</div>
-        <div class="step-desc">Tu reçois une notification dès que ton compte est activé — généralement dans les 24h. Tu peux aussi me contacter directement si tu veux aller plus vite.</div>
-        <span class="step-tag">⏱ Sous 24h</span>
-      </div>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <div>
-        <div class="step-title">Lance-toi dans le Module 1 !</div>
-        <div class="step-desc">Dès ton accès validé, connecte-toi à la plateforme et commence ton onboarding. Pense à avoir un carnet à portée de main. 📓</div>
-        <span class="step-tag">🚀 C'est parti !</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA -->
-  <div class="cta-wrap">
-    <a href="https://www.formation-iridescence.fr" class="cta-btn">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
-      Créer mon compte maintenant
-    </a>
-    <p class="cta-note">Tu seras redirigée vers la page d'inscription · Accès validé sous 24h</p>
-  </div>
-
-  <!-- CONTACT -->
-  <div class="contact-box">
-    <div class="contact-title">
-      💬 Une question ? Charlotte est là pour toi
-    </div>
+    <div class="divider"></div>
+    <p class="contact-label">Me contacter</p>
     <div class="contact-links">
       <a href="mailto:charlotte@formation-iridescence.fr" class="contact-link cl-email">
-        ✉️ charlotte@formation-iridescence.fr
+        <span>✉️</span> charlotte@formation-iridescence.fr
       </a>
-      <a href="https://wa.me/33613067034" target="_blank" class="contact-link cl-whatsapp">
-        💬 WhatsApp
+      <a href="https://wa.me/33613067034" target="_blank" class="contact-link cl-wa">
+        <span>💬</span> WhatsApp : +33 6 13 06 70 34
       </a>
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <div class="conf-footer">
-    <em>Iridescence</em> · © 2025 Charlotte Minet · Tous droits réservés<br>
-    Une question sur ton paiement ? <a href="mailto:charlotte@formation-iridescence.fr" style="color:var(--iris);">charlotte@formation-iridescence.fr</a>
+  <p class="sign">À très vite,<br><strong>Charlotte 🌈</strong></p>
+
+  <div class="footer">
+    <em>Iridescence</em> · © 2025 Charlotte Minet · Tous droits réservés
   </div>
 
 </div>
 
 <script>
-// ── CONFETTIS ──
 (function(){
-  const colors = ['#7B6CFF','#FF6BE8','#9BFFE7','#FFF3A3','#FFB3F0','#B3AEFF'];
-  const wrap = document.getElementById('confetti');
-  for(let i = 0; i < 60; i++){
-    const c = document.createElement('div');
-    c.className = 'c';
-    c.style.cssText = `
-      left:${Math.random()*100}%;
-      background:${colors[Math.floor(Math.random()*colors.length)]};
-      width:${6+Math.random()*6}px;
-      height:${6+Math.random()*6}px;
-      border-radius:${Math.random()>0.5?'50%':'2px'};
-      animation-duration:${2.5+Math.random()*3}s;
-      animation-delay:${Math.random()*2}s;
-    `;
+  const colors=['#7B6CFF','#FF6BE8','#9BFFE7','#FFF3A3','#FFB3F0','#B3AEFF'];
+  const wrap=document.getElementById('confetti');
+  for(let i=0;i<60;i++){
+    const c=document.createElement('div');
+    c.className='c';
+    c.style.cssText=`left:${Math.random()*100}%;background:${colors[Math.floor(Math.random()*colors.length)]};width:${6+Math.random()*6}px;height:${6+Math.random()*6}px;border-radius:${Math.random()>.5?'50%':'2px'};animation-duration:${2.5+Math.random()*3}s;animation-delay:${Math.random()*2}s;`;
     wrap.appendChild(c);
   }
-  // Nettoyer après
-  setTimeout(()=>{ wrap.innerHTML=''; }, 6000);
+  setTimeout(()=>{wrap.innerHTML='';},6000);
 })();
 </script>
 
