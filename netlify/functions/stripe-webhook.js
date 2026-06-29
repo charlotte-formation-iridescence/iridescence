@@ -87,7 +87,7 @@ exports.handler = async (event) => {
               <a href="https://www.formation-iridescence.fr" style="color:#7B6CFF;text-decoration:none;">www.formation-iridescence.fr</a>
             </p>
             <p style="margin:0;font-size:14px;color:#3d3a5c;">
-              <strong style="color:#1a1730;">Mot de passe de première connexion :</strong>
+              <strong style="color:#1a1730;">Ton code d'accès de formation :</strong>
               <span style="font-family:monospace;font-size:15px;font-weight:800;color:#7B6CFF;background:#ede9ff;padding:3px 10px;border-radius:6px;margin-left:6px;">IRIS2025</span>
             </p>
             <p style="margin:10px 0 0;font-size:12px;color:#6e6d85;font-style:italic;">Dès ta première connexion, la plateforme te demandera de créer ton propre mot de passe personnel.</p>
@@ -102,13 +102,13 @@ exports.handler = async (event) => {
         <tr><td style="padding:6px 0;">
           <table cellpadding="0" cellspacing="0"><tr>
             <td style="width:32px;height:32px;background:rgba(123,108,255,.12);border-radius:10px;text-align:center;vertical-align:middle;font-size:13px;font-weight:800;color:#7B6CFF;">1</td>
-            <td style="padding-left:12px;font-size:14px;color:#3d3a5c;line-height:1.6;">Connecte-toi sur www.formation-iridescence.fr avec le mot de passe ci-dessus</td>
+            <td style="padding-left:12px;font-size:14px;color:#3d3a5c;line-height:1.6;">Rends-toi sur www.formation-iridescence.fr</td>
           </tr></table>
         </td></tr>
         <tr><td style="padding:6px 0;">
           <table cellpadding="0" cellspacing="0"><tr>
             <td style="width:32px;height:32px;background:rgba(123,108,255,.12);border-radius:10px;text-align:center;vertical-align:middle;font-size:13px;font-weight:800;color:#7B6CFF;">2</td>
-            <td style="padding-left:12px;font-size:14px;color:#3d3a5c;line-height:1.6;">Crée ton compte avec ton email et ton propre mot de passe</td>
+            <td style="padding-left:12px;font-size:14px;color:#3d3a5c;line-height:1.6;">Va dans l'onglet "Crée un compte" avec ton email et ton propre mot de passe et Dans la case "Code d'accès formation" rentre le code ci-dessus</td>
           </tr></table>
         </td></tr>
         <tr><td style="padding:6px 0;">
